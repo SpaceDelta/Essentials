@@ -383,8 +383,10 @@ public class Essentials extends JavaPlugin implements net.ess3.api.IEssentials {
             timer = new EssentialsTimer(this);
             scheduleSyncRepeatingTask(timer, 1000, 50);
 
+            System.out.println("POOP");
             Economy.setEss(this);
             execTimer.mark("RegHandler");
+            System.out.println("PEEEP");
 
             // Register /hat and /back default permissions
             PermissionsDefaults.registerAllBackDefaults();
