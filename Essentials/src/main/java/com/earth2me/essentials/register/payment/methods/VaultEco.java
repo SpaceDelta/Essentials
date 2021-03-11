@@ -21,7 +21,6 @@ public class VaultEco implements Method {
         final RegisteredServiceProvider<Economy> economyProvider = this.vault.getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economyProvider != null) {
             this.economy = economyProvider.getProvider();
-            System.out.println("ECOOO " + economyProvider.getPlugin().getName());
         }
     }
 
