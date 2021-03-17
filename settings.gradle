@@ -3,12 +3,6 @@ rootProject.name = 'EssentialsXParent'
 // Modules
 [
         "",
-        "AntiBuild",
-        "Chat",
-        "GeoIP",
-        "Protect",
-        "Spawn",
-        "XMPP",
 ].each {
     include(":EssentialsX$it")
     project(":EssentialsX$it").projectDir = file("Essentials$it")

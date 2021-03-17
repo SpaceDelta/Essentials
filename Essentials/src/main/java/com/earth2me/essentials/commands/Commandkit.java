@@ -72,11 +72,11 @@ public class Commandkit extends EssentialsCommand {
         for (final Kit kit : kits) {
             try {
 
-                kit.checkDelay(userFrom);
+                // kit.checkDelay(userFrom); TODO WARNING requires global cooldowns (intercepted at KitClaimEvent) !!!!
                 kit.checkAffordable(userFrom);
                 if (!kit.expandItems(userTo))
                     continue;
-                kit.setTime(userFrom);
+                // kit.setTime(userFrom); THIS TOO
                 kit.chargeUser(userTo);
 
                 if (!userFrom.equals(userTo)) {
@@ -84,7 +84,6 @@ public class Commandkit extends EssentialsCommand {
                 }
 
                 userTo.sendMessage(tl("kitReceive", kit.getName()));
-
             } catch (final NoChargeException ex) {
                 if (ess.getSettings().isDebug()) {
                     ess.getLogger().log(Level.INFO, "Soft kit error, abort spawning " + kit.getName(), ex);

@@ -292,10 +292,6 @@ commands:
     description: Removes entities in your world.
     usage: /<command> <all|tamed|named|drops|arrows|boats|minecarts|xp|paintings|itemframes|endercrystals|monsters|animals|ambient|mobs|[mobType]> [radius|world]
     aliases: [eremove,butcher,ebutcher,killall,ekillall,mobkill,emobkill]
-  repair:
-    description: Repairs the durability of one or all items.
-    usage: /<command> [hand|all]
-    aliases: [fix,efix,erepair]
   rest:
     description: Rests you or the given player.
     usage: /<command> [player]
@@ -392,38 +388,6 @@ commands:
     description: Teleport to the highest block at your current position.
     usage: /<command>
     aliases: [etop]
-  tpa:
-    description: Request to teleport to the specified player.
-    usage: /<command> <player>
-    aliases: [call,ecall,etpa,tpask,etpask]
-  tpaall:
-    description: Requests all players online to teleport to you.
-    usage: /<command> <player>
-    aliases: [etpaall]
-  tpaccept:
-    description: Accepts a teleport request.
-    usage: /<command> [otherplayer]
-    aliases: [etpaccept,tpyes,etpyes]
-  tpahere:
-    description: Request that the specified player teleport to you.
-    usage: /<command> <player>
-    aliases: [etpahere]
-  tpall:
-    description: Teleport all online players to another player.
-    usage: /<command> <player>
-    aliases: [etpall]
-  tpauto:
-    description: Automatically accept teleportation requests.
-    usage: /<command> <player>
-    aliases: [etpauto]
-  tpacancel:
-    description: Cancel all outstanding teleport requests. Specify [player] to cancel requests with them.
-    usage: /<command> [player]
-    aliases: [etpacancel]
-  tpdeny:
-    description: Reject a teleport request.
-    usage: /<command>
-    aliases: [etpdeny,tpno,etpno]
   tpo:
     description: Teleport override for tptoggle.
     usage: /<command> <player> [otherplayer]
@@ -480,10 +444,6 @@ commands:
     description: Switch between worlds.
     usage: /<command> [world]
     aliases: [eworld]
-  worth:
-    description: Calculates the worth of items in hand or as specified.
-    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
-    aliases: [eprice,price,eworth]
 
 permissions:
   essentials.*:

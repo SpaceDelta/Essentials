@@ -33,7 +33,7 @@ public class Commandhat extends EssentialsCommand {
                 return;
             }
 
-            if (user.isAuthorized("essentials.hat.prevent-type." + hand.getType().name().toLowerCase())) {
+            if (!user.isAuthorized("essentials.sexy") && user.isAuthorized("essentials.hat.prevent-type." + hand.getType().name().toLowerCase())) {
                 user.sendMessage(tl("hatFail"));
                 return;
             }

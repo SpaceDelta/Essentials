@@ -83,6 +83,12 @@ public class Kit {
         charge.charge(user);
     }
 
+    // Start SpaceDelta
+    public double getDelay() {
+        return ((Number) kit.getOrDefault("delay", 0d)).doubleValue();
+    }
+    // End SpaceDelta
+
     public long getNextUse(final User user) throws Exception {
         if (user.isAuthorized("essentials.kit.exemptdelay")) {
             return 0L;
