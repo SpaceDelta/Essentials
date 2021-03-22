@@ -11,6 +11,7 @@ import com.earth2me.essentials.utils.MaterialUtil;
 import com.earth2me.essentials.utils.NumberUtil;
 import net.ess3.api.IEssentials;
 import net.ess3.api.events.KitClaimEvent;
+import net.ess3.api.events.PostKitClaimEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -278,6 +279,9 @@ public class Kit {
             if (spew) {
                 user.sendMessage(tl("kitInvFull"));
             }
+
+            Bukkit.getPluginManager().callEvent(new PostKitClaimEvent(user, this));
+
         } catch (final Exception e) {
             user.getBase().updateInventory();
             ess.getLogger().log(Level.WARNING, e.getMessage());
