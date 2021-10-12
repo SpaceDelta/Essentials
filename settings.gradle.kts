@@ -17,6 +17,21 @@ dependencyResolutionManagement {
         maven("https://libraries.minecraft.net/") {
             content { includeGroup("com.mojang") }
         }
+
+        // Start SpaceDelta
+        val sd_user: String by settings
+        val sd_pass: String by settings
+        val sd_repo: String by settings
+        maven {
+            credentials {
+                username = sd_user
+                password = sd_pass
+            }
+            url = uri(sd_repo)
+            isAllowInsecureProtocol = true
+        }
+        // End SpaceDelta
+
         mavenCentral {
             content { includeGroup("net.kyori") }
         }
@@ -32,14 +47,7 @@ rootProject.name = "EssentialsXParent"
 
 // Modules
 sequenceOf(
-    "",
-    "AntiBuild",
-    "Chat",
-    "Discord",
-    "GeoIP",
-    "Protect",
-    "Spawn",
-    "XMPP",
+    ""
 ).forEach {
     include(":EssentialsX$it")
     project(":EssentialsX$it").projectDir = file("Essentials$it")

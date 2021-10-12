@@ -21,10 +21,6 @@ commands:
     description: Opens up an Anvil.
     usage: /<command>
     aliases: [eanvil]
-  back:
-    description: Teleports you to your location prior to tp/spawn/warp.
-    usage: /<command> [player]
-    aliases: [eback,return,ereturn]
   backup:
     description: Runs the backup if configured.
     usage: /<command>
@@ -57,14 +53,6 @@ commands:
     description: Opens up a cartography table.
     usage: /<command>
     aliases: [ecartographytable, carttable, ecarttable]
-  clearinventory:
-    description: Clear all items in your inventory.
-    usage: /<command> [player|*] [item[:<data>]|*|**] [amount]
-    aliases: [ci,eci,clean,eclean,clear,eclear,clearinvent,eclearinvent,eclearinventory]
-  clearinventoryconfirmtoggle:
-    description: Toggles whether you are prompted to confirm inventory clears.
-    usage: /<command>
-    aliases: [eclearinventoryconfirmtoggle, clearinventoryconfirmoff, eclearinventoryconfirmoff, clearconfirmoff, eclearconfirmoff, clearconfirmon, eclearconfirmon, clearconfirm, eclearconfirm]
   condense:
     description: Condenses items into a more compact blocks.
     usage: /<command> [itemname]
@@ -80,10 +68,6 @@ commands:
   customtext:
     description: Allows you to create custom text commands.
     usage: /<alias> - Define in bukkit.yml
-  delhome:
-    description: Removes a home.
-    usage: /<command> [player:]<name>
-    aliases: [edelhome,remhome,eremhome,rmhome,ermhome]
   deljail:
     description: Removes a jail.
     usage: /<command> <jailname>
@@ -92,10 +76,6 @@ commands:
     description: Deletes the specified kit.
     usage: /<command> <kit>
     aliases: [edelkit,remkit,eremkit,rmkit,ermkit,deletekit,edeletekit]
-  delwarp:
-    description: Deletes the specified warp.
-    usage: /<command> <warp>
-    aliases: [edelwarp,remwarp,eremwarp,rmwarp,ermwarp]
   depth:
     description: States current depth, relative to sea level.
     usage: /<command>
@@ -128,10 +108,6 @@ commands:
     description: Allows you to modify a stack of fireworks.
     usage: /<command> <<meta param>|power [amount]|clear|fire [amount]>
     aliases: [efirework]
-  gamemode:
-    description: Change player gamemode.
-    usage: /<command> <survival|creative|adventure|spectator> [player]
-    aliases: [adventure,eadventure,adventuremode,eadventuremode,creative,ecreative,eecreative,creativemode,ecreativemode,egamemode,gm,egm,gma,egma,gmc,egmc,gms,egms,gmt,egmt,survival,esurvival,survivalmode,esurvivalmode,gmsp,sp,egmsp,spec,spectator]
   gc:
     description: Reports memory, uptime and tick info.
     usage: /<command>
@@ -156,14 +132,6 @@ commands:
     description: Get some cool new headgear.
     usage: /<command> [remove]
     aliases: [ehat,head,ehead]
-  help:
-    description: Views a list of available commands.
-    usage: /<command> [search term] [page]
-    aliases: [ehelp]
-  home:
-    description: Teleport to your home.
-    usage: /<command> [player:][name]
-    aliases: [ehome,homes,ehomes]
   ice:
     description: Cools a player off.
     usage: /<command> [player]
@@ -204,14 +172,6 @@ commands:
     description: Jumps to the nearest block in the line of sight.
     usage: /<command>
     aliases: [j,ej,ejump,jumpto,ejumpto]
-  kick:
-    description: Kicks a specified player with a reason.
-    usage: /<command> <player> [reason]
-    aliases: [ekick]
-  kickall:
-    description: Kicks all players off the server except the issuer.
-    usage: /<command> [reason]
-    aliases: [ekickall]
   kill:
     description: Kills specified player.
     usage: /<command> <player>
@@ -232,10 +192,6 @@ commands:
     description: The power of Thor. Strike at cursor or player.
     usage: /<command> [player] [power]
     aliases: [elightning,shock,eshock,smite,esmite,strike,estrike,thor,ethor]
-  list:
-    description: List all online players.
-    usage: /<command> [group]
-    aliases: [elist,online,eonline,playerlist,eplayerlist,plist,eplist,who,ewho]
   loom:
     description: Opens up a loom.
     usage: /<command>
@@ -287,7 +243,6 @@ commands:
   realname:
     description: Displays the username of a user based on nick.
     usage: /<command> <nickname>
-    aliases: [erealname]
   recipe:
     description: Displays how to craft items.
     usage: /<command> <item> [number]
@@ -308,22 +263,10 @@ commands:
     description: Shows the last logout time of a player.
     usage: /<command> <playername>
     aliases: [eseen, ealts, alts]
-  sethome:
-    description: Set your home to your current location.
-    usage: /<command> [[player:]name]
-    aliases: [esethome,createhome,ecreatehome]
-  setjail:
-    description: Creates a jail where you specified named [jailname].
-    usage: /<command> <jailname>
-    aliases: [esetjail,createjail,ecreatejail]
   settpr:
     description: Set the random teleport location and parameters.
     usage: /<command> [center|minrange|maxrange] [value]
     aliases: [esettpr, settprandom, esettprandom]
-  setwarp:
-    description: Creates a new warp.
-    usage: /<command> <warp>
-    aliases: [createwarp,ecreatewarp,esetwarp]
   setworth:
     description: Set the sell value of an item.
     usage: /<command> [itemname|id] <price>
@@ -360,22 +303,10 @@ commands:
     description: Opens up a stonecutter.
     usage: /<command>
     aliases: [estonecutter]
-  sudo:
-    description: Make another user perform a command.
-    usage: /<command> <player> <command [args]>
-    aliases: [esudo]
   suicide:
     description: Causes you to perish.
     usage: /<command>
     aliases: [esuicide]
-  tempban:
-    description: Temporary ban a user.
-    usage: /<command> <playername> <datediff> [reason]
-    aliases: [etempban]
-  tempbanip:
-    description: Temporarily ban an IP Address.
-    usage: /<command> <playername> <datediff> [reason]
-    aliases: [etempbanip]
   thunder:
     description: Enable/disable thunder.
     usage: /<command> <true/false> [duration]
@@ -392,14 +323,6 @@ commands:
     description: Teleport to the highest block at your current position.
     usage: /<command>
     aliases: [etop]
-  tpo:
-    description: Teleport override for tptoggle.
-    usage: /<command> <player> [otherplayer]
-    aliases: [etpo]
-  tpohere:
-    description: Teleport here override for tptoggle.
-    usage: /<command> <player>
-    aliases: [etpohere]
   tppos:
     description: Teleport to coordinates.
     usage: /<command> <x> <y> <z> [yaw] [pitch] [world]
@@ -408,30 +331,14 @@ commands:
     description: Teleport randomly.
     usage: /<command>
     aliases: [etpr, tprandom, etprandom]
-  tptoggle:
-    description: Blocks all forms of teleportation.
-    usage: /<command> [player] [on|off]
-    aliases: [etptoggle]
   tree:
     description: Spawn a tree where you are looking.
     usage: /<command> <tree|birch|redwood|redmushroom|brownmushroom|jungle|junglebush|swamp>
     aliases: [etree]
-  unban:
-    description: Unbans the specified player.
-    usage: /<command> <player>
-    aliases: [pardon,eunban,epardon]
   unlimited:
     description: Allows the unlimited placing of items.
     usage: /<command> <list|item|clear> [player]
     aliases: [eunlimited,ul,unl,eul,eunl]
-  warp:
-    description: List all warps or warp to the specified location.
-    usage: /<command> <pagenumber|warp> [player]
-    aliases: [ewarp,warps,ewarps]
-  warpinfo:
-    description: Finds location information for a specified warp.
-    usage: /<command> <warp>
-    aliases: [ewarpinfo]
   weather:
     description: Sets the weather.
     usage: /<command> <storm/sun> [duration]
@@ -444,10 +351,6 @@ commands:
     description: Opens up a workbench.
     usage: /<command>
     aliases: [craft,ecraft,wb,ewb,wbench,ewbench,eworkbench]
-  world:
-    description: Switch between worlds.
-    usage: /<command> [world]
-    aliases: [eworld]
 
 permissions:
   essentials.*:

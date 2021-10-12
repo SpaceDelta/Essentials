@@ -12,14 +12,3 @@ project.ext {
 
     FULL_VERSION = "${version}".replace("-SNAPSHOT", "-dev+${GIT_DEPTH}-${GIT_COMMIT}")
 }
-
-            /* Starship */
-        repositories {
-            maven {
-                credentials {
-                    username sd_user
-                }
-                url sd_repo
-                    password sd_pass
-        }
-            }

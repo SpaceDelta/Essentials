@@ -8,6 +8,7 @@ import org.bukkit.event.HandlerList;
 
 /**
  * Called when the player has been given a kit
+ * @author SpaceDelta
  */
 public class PostKitClaimEvent extends Event {
 

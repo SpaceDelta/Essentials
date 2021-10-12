@@ -7,6 +7,7 @@ dependencies {
         exclude group: "org.bukkit", module: "bukkit"
     }
     compileOnly 'net.luckperms:api:5.0'
+    compileOnly group: 'net.spacedelta', name: 'starship', version: '+' // SpaceDelta
 
     api 'io.papermc:paperlib:1.0.6'
 
