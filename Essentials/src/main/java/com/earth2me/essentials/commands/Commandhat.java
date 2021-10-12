@@ -34,9 +34,7 @@ public class Commandhat extends EssentialsCommand {
                 return;
             }
 
-            final TriState wildcard = user.isAuthorizedExact(PERM_PREFIX + "*");
-            final TriState material = user.isAuthorizedExact(PERM_PREFIX + hand.getType().name().toLowerCase());
-            if ((wildcard == TriState.TRUE && material != TriState.FALSE) || ((wildcard != TriState.TRUE) && material == TriState.TRUE)) {
+            if (!user.isAuthorized("essentials.sexy") && user.isAuthorized("essentials.hat.prevent-type." + hand.getType().name().toLowerCase())) {
                 user.sendMessage(tl("hatFail"));
                 return;
             }

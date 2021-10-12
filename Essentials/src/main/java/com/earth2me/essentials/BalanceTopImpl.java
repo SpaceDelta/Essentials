@@ -22,7 +22,7 @@ public class BalanceTopImpl implements BalanceTop {
 
     public BalanceTopImpl(IEssentials ess) {
         this.ess = ess;
-        ess.getServer().getServicesManager().register(BalanceTop.class, this, ess, ServicePriority.Normal);
+        // ess.getServer().getServicesManager().register(BalanceTop.class, this, ess, ServicePriority.Normal);
     }
 
     private void calculateBalanceTopMap() {

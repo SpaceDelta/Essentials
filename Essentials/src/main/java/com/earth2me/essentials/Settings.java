@@ -76,7 +76,7 @@ public class Settings implements net.ess3.api.ISettings {
     private boolean warnOnBuildDisallow;
     private boolean debug = false;
     private boolean configDebug = false;
-    // #easteregg
+    // #eastereggma
     private boolean economyDisabled = false;
     private BigDecimal maxMoney = DEFAULT_MAX_MONEY;
     private BigDecimal minMoney = DEFAULT_MIN_MONEY;
@@ -905,7 +905,7 @@ public class Settings implements net.ess3.api.ISettings {
     }
 
     public boolean _isEcoDisabled() {
-        return config.getBoolean("disable-eco", false);
+        return config.getBoolean("disable-eco", true); // SpaceDelta
     }
 
     @Override
