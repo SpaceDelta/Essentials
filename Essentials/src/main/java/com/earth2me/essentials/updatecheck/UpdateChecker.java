@@ -190,7 +190,7 @@ public final class UpdateChecker {
             final RemoteVersion latestDev = this.fetchLatestDev().join();
             switch (latestDev.getBranchStatus()) {
                 case IDENTICAL: {
-                    return sendLatestMessage ? new String[] {tl("versionDevLatest")} : new String[] {};
+                    return /* sendLatestMessage */ false ? new String[] {tl("versionDevLatest")} : new String[] {}; // SpaceDelta
                 }
                 case BEHIND: {
                     return new String[] {tl("versionDevBehind", latestDev.getDistance()),
@@ -198,8 +198,9 @@ public final class UpdateChecker {
                 }
                 case AHEAD:
                 case DIVERGED: {
-                    return new String[] {tl(latestDev.getDistance() == 0 ? "versionDevDivergedLatest" : "versionDevDiverged", latestDev.getDistance()),
-                            tl("versionDevDivergedBranch", this.getVersionBranch()) };
+                    return new String[] {}; // SpaceDelta, annoying af.
+                    //return new String[] {tl(latestDev.getDistance() == 0 ? "versionDevDivergedLatest" : "versionDevDiverged", latestDev.getDistance()),
+                      //      tl("versionDevDivergedBranch", this.getVersionBranch()) };
                 }
                 case UNKNOWN: {
                     return verboseErrors ? new String[] {tl("versionCustom", this.getBuildInfo())} : new String[] {};
