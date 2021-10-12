@@ -69,6 +69,7 @@ public class Commandcondense extends EssentialsCommand {
             final ItemStack input = condenseType.getInput();
             final ItemStack result = condenseType.getResult();
 
+            /*
             if (validateReverse) {
                 boolean pass = false;
                 for (final Recipe revRecipe : ess.getServer().getRecipesFor(input)) {
@@ -81,6 +82,8 @@ public class Commandcondense extends EssentialsCommand {
                     return false;
                 }
             }
+
+             */
 
             int amount = 0;
 
